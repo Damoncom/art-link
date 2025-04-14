@@ -4,7 +4,13 @@ import HomeTopNav from '../../components/HomeTopNav/HomeTopNav';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <HomeTopNav />
       {/* 子路由内容将在此渲染 */}
       <Outlet />

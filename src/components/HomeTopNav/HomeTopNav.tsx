@@ -5,8 +5,9 @@ import styled from 'styled-components';
 const NavContainer = styled.div`
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
+  width: 200px;
   display: flex;
   height: 50px;
   background: white;
@@ -20,7 +21,8 @@ const NavItem = styled.div<{ $isActive: boolean }>`
   justify-content: center;
   color: ${(props) => (props.$isActive ? '#A456DD' : '#666')};
   font-weight: ${(props) => (props.$isActive ? 'bold' : 'normal')};
-  border-bottom: ${(props) => (props.$isActive ? '2px solid #A456DD' : 'none')};
+  /* border-bottom: ${(props) =>
+    props.$isActive ? '2px solid #A456DD' : 'none'}; */
 `;
 
 const HomeTopNav: React.FC = () => {
