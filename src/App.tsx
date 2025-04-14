@@ -1,38 +1,86 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
-// import './App.css';
 import React from 'react';
-import { Home } from './pages/Home';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
+import { BottomNav } from './components/BottomNav/BottomNav';
+import Home from './pages/Home';
+import Discover from './pages/Home/Discover'; // 新增
+import Following from './pages/Home/Following'; // 新增
+import Like from './pages/Like';
+import Message from './pages/Message';
+import Cart from './pages/Cart';
+import Profile from './pages/Profile';
+import {
+  HomeOutlined,
+  HeartOutlined,
+  MailOutlined,
+  ShoppingCartOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
 
-function App() {
-  // const [count, setCount] = useState(0);
+const App: React.FC = () => {
+  const navItems = [
+    {
+      id: 'home',
+      icon: <HomeOutlined />,
+      label: '首页',
+      path: '/home',
+    },
+    {
+      id: 'like',
+      icon: <HeartOutlined />,
+      label: '喜欢',
+      path: '/like',
+    },
+    {
+      id: 'message',
+      icon: <MailOutlined />,
+      label: '消息',
+      path: '/message',
+    },
+    {
+      id: 'cart',
+      icon: <ShoppingCartOutlined />,
+      label: '购物车',
+      path: '/cart',
+    },
+    {
+      id: 'profile',
+      icon: <UserOutlined />,
+      label: '我的',
+      path: '/profile',
+    },
+  ];
 
   return (
-    <>
-      <Home></Home>
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div
+        style={{
+          paddingBottom: '60px',
+          minHeight: '100vh',
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />}>
+            <Route index element={<Navigate to="discover" replace />} />
+            <Route path="discover" element={<Discover />} />
+            <Route path="following" element={<Following />} />
+          </Route>
+          <Route path="/like" element={<Like />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          {/* 其他路径重定向到根 */}
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-    </>
+      <BottomNav items={navItems} />
+    </Router>
   );
-}
+};
 
 export default App;

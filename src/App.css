@@ -1,3 +1,9 @@
+/* 确保内容不被导航栏遮挡 */
+body {
+  padding-top: 50px; /* 顶部导航高度 */
+  padding-bottom: 60px; /* 底部导航高度 */
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
