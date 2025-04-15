@@ -10,7 +10,7 @@ export const NavContainer = styled.div`
   height: 50px;
   background: white;
   z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
 `;
 
@@ -22,6 +22,7 @@ export const NavItem = styled.div<{ $isActive: boolean }>`
   font-weight: ${(props) => (props.$isActive ? 'bold' : 'normal')};
   width: 100px;
   height: 100%;
+  font-size: 17px;
   cursor: pointer;
 `;
 
@@ -30,7 +31,7 @@ export const SearchIcon = styled.div`
   right: 20px;
   cursor: pointer;
   color: #666;
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.2s;
 
   &:hover {

@@ -32,10 +32,13 @@ const ArtworkCard: React.FC<ArtworkCardProps> = ({
   };
 
   const formatLikeCount = (count: number): string => {
-    if (count >= 1000) {
-      return `${(count / 1000).toFixed(1)}k+`;
+    if (count >= 10000) {
+      return `${(count / 10000).toFixed(1)}w+`; // 1万以上显示为"1.5w+"格式
     }
-    return count.toString();
+    if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}k+`; // 1千以上显示为"1.2k+"格式
+    }
+    return count.toString(); // 不足1千直接显示数字
   };
 
   return (

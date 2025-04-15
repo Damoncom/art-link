@@ -23,7 +23,7 @@ const Discover: React.FC = () => {
       <ArtworkCard
         imageUrl={demo2}
         title="日出拼豆第二弹"
-        likes={1250}
+        likes={2250}
         authorAvatar={author2}
         authorName="好吃鱼（福州版）"
         initialLiked={false}
@@ -31,7 +31,7 @@ const Discover: React.FC = () => {
       <ArtworkCard
         imageUrl={demo3}
         title="葡萄花"
-        likes={1250}
+        likes={32250}
         authorAvatar={author3}
         authorName="炒饭博主bot"
         initialLiked={false}

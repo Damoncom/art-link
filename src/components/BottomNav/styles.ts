@@ -13,7 +13,7 @@ export const NavContainer = styled.nav`
   height: 50px;
   display: flex;
   background: #fff;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
   z-index: 100;
 `;
 
