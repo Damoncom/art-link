@@ -9,6 +9,8 @@ const Home: React.FC = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        paddingTop: '50px',
+        paddingBottom: '60px',
       }}
     >
       <HomeTopNav />

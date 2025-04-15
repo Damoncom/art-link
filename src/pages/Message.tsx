@@ -5,10 +5,16 @@ interface MessageProps {}
 
 const Message: React.FC<MessageProps> = ({}) => {
   return (
-    <>
-      Message
-      {/* <TBBar></TBBar>; */}
-    </>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: '60px',
+      }}
+    >
+      消息
+    </div>
   );
 };
 

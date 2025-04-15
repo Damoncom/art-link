@@ -17,7 +17,7 @@ const Discover: React.FC = () => {
         likes={1250}
         authorAvatar={author1}
         authorName="我是妈粉不是兄弟"
-        initialLiked={false}
+        initialLiked={true}
         // onLikeChange={(liked) => console.log('点赞状态:', liked)}
       />
       <ArtworkCard
@@ -34,7 +34,7 @@ const Discover: React.FC = () => {
         likes={32250}
         authorAvatar={author3}
         authorName="炒饭博主bot"
-        initialLiked={false}
+        initialLiked={true}
       />
     </div>
   );
