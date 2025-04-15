@@ -59,6 +59,7 @@ const App: React.FC = () => {
     <Router>
       <div
         style={{
+          paddingTop: '50px',
           paddingBottom: '60px',
           minHeight: '100vh',
         }}

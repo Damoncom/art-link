@@ -2,6 +2,7 @@
 body {
   padding-top: 50px; /* 顶部导航高度 */
   padding-bottom: 60px; /* 底部导航高度 */
+  background: #e6e6e6;
 }
 
 /* #root {
