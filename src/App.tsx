@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 import { BottomNav } from './components/BottomNav/BottomNav';
 import Home from './pages/Home';
-import Discover from './pages/Home/Discover'; // 新增
-import Following from './pages/Home/Following'; // 新增
+import Discover from './pages/Home/Discover';
+import Following from './pages/Home/Following';
 import Like from './pages/Like';
 import Message from './pages/Message';
 import Cart from './pages/Cart';
