@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './style';
 
-interface OrderCardProps {
+export interface OrderCardProps {
   orderId: string;
   artworkImage: string;
   artworkName: string;
@@ -61,3 +61,4 @@ const OrderCard: React.FC<OrderCardProps> = ({
 };
 
 export default OrderCard;
+// export type { OrderCardProps };

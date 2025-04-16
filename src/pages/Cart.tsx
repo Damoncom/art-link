@@ -4,9 +4,10 @@ import CartTopNav from '../components/CartTopNav/CartTopNav';
 import OrderCard from '../components/OrderCard/OrderCard';
 import author2 from '../components/ArtworkCard/image/author2.jpg';
 import demo3 from '../components/ArtworkCard/image/demo3.jpg';
+import type { OrderCardProps } from '../components/OrderCard/OrderCard';
 
 const Cart: React.FC = () => {
-  const orders = [
+  const orders: Array<OrderCardProps> = [
     {
       orderId: '1',
       artworkImage: author2,
@@ -14,7 +15,7 @@ const Cart: React.FC = () => {
       price: 199,
       quantity: 1,
       orderTime: '2025-04-09 14:30',
-      status: 'pending',
+      status: 'pending', // 现在会被识别为正确的联合类型
       creationPeriod: '7天',
     },
     {
@@ -24,7 +25,7 @@ const Cart: React.FC = () => {
       price: 599,
       quantity: 2,
       orderTime: '2025-03-03 18:39',
-      status: 'completed',
+      status: 'completed', // 现在会被识别为正确的联合类型
       creationPeriod: '21天',
     },
   ];
