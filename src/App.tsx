@@ -11,6 +11,9 @@ import Discover from './pages/Home/Discover';
 import Following from './pages/Home/Following';
 import Like from './pages/Like';
 import Message from './pages/Message';
+import Likes from './pages/Message/Likes';
+// import Follows from './pages/Message/Follows';
+// import Comments from './pages/Message/Comments';
 import Cart from './pages/Cart';
 import Profile from './pages/Profile';
 import {
@@ -72,7 +75,12 @@ const App: React.FC = () => {
             <Route path="following" element={<Following />} />
           </Route>
           <Route path="/like" element={<Like />} />
-          <Route path="/message" element={<Message />} />
+          <Route path="/message" element={<Message />}>
+            <Route index element={<Message />} />
+            <Route path="likes" element={<Likes />} />
+            {/* <Route path="follows" element={<Follows />} />
+            <Route path="comments" element={<Comments />} /> */}
+          </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Navigate to="/" />} />

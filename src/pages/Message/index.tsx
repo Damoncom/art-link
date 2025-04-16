@@ -16,6 +16,7 @@ const Message: React.FC = ({}) => {
       username: '我是妈粉不是兄弟',
       message: '这个价格OK吗？',
       time: '10:30',
+      unreadCount: 3,
     },
     {
       id: 2,
@@ -50,6 +51,7 @@ const Message: React.FC = ({}) => {
                   username={msg.username}
                   message={msg.message}
                   time={msg.time}
+                  unreadCount={msg.unreadCount}
                 />
               ))}
             </div>

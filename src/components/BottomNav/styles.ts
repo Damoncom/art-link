@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// 修复3：为所有 styled 组件明确定义 props 类型
 interface StyledProps {
   $isActive?: boolean;
 }
