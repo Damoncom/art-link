@@ -13,7 +13,7 @@ export interface OrderCardProps {
 }
 
 const OrderCard: React.FC<OrderCardProps> = ({
-  orderId,
+  // orderId,
   artworkImage,
   artworkName,
   price,

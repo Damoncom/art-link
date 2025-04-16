@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
+// import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import CartTopNav from '../components/CartTopNav/CartTopNav';
 import OrderCard from '../components/OrderCard/OrderCard';
 import author2 from '../components/ArtworkCard/image/author2.jpg';
