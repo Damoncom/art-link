@@ -25,7 +25,6 @@ const Message: React.FC = ({}) => {
       message: '老师！想约稿 (*^▽^*)',
       time: '04-07',
     },
-    // 更多消息...
   ];
 
   return (
@@ -39,28 +38,19 @@ const Message: React.FC = ({}) => {
       }}
     >
       <MessageTopNav />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div style={{ width: '95%', margin: '45px 0 0 0' }}>
-              {messages.map((msg) => (
-                <DialogBox
-                  key={msg.id}
-                  avatarUrl={msg.avatarUrl}
-                  username={msg.username}
-                  message={msg.message}
-                  time={msg.time}
-                  unreadCount={msg.unreadCount}
-                />
-              ))}
-            </div>
-          }
-        />
-        <Route path="likes" element={<Outlet />} />
-        <Route path="follows" element={<Outlet />} />
-        <Route path="comments" element={<Outlet />} />
-      </Routes>
+      {/* <div style={{ width: '95%', margin: '45px 0 0 0' }}>
+        {messages.map((msg) => (
+          <DialogBox
+            key={msg.id}
+            avatarUrl={msg.avatarUrl}
+            username={msg.username}
+            message={msg.message}
+            time={msg.time}
+            unreadCount={msg.unreadCount}
+          />
+        ))}
+      </div> */}
+      <Outlet />
     </div>
   );
 };

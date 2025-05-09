@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet, useNavigate } from 'react-router-dom';
 import CartTopNav from '../components/CartTopNav/CartTopNav';
 import OrderCard from '../components/OrderCard/OrderCard';
 import author2 from '../components/ArtworkCard/image/author2.jpg';
@@ -8,6 +7,8 @@ import demo3 from '../components/ArtworkCard/image/demo3.jpg';
 import type { OrderCardProps } from '../components/OrderCard/OrderCard';
 
 const Cart: React.FC = () => {
+  const navigate = useNavigate();
+
   const orders: Array<OrderCardProps> = [
     {
       orderId: '1',
@@ -31,6 +32,10 @@ const Cart: React.FC = () => {
     },
   ];
 
+  const handleOrderClick = () => {
+    navigate(`/cart/orderDetail`);
+  };
+
   return (
     <div>
       <CartTopNav />
@@ -38,7 +43,10 @@ const Cart: React.FC = () => {
         <Route
           path="/"
           element={
-            <div style={{ margin: '66px 0 0 0' }}>
+            <div
+              style={{ margin: '66px 0 0 0' }}
+              onClick={() => handleOrderClick()}
+            >
               {orders.map((order) => (
                 // TODO: 类型bug
                 <OrderCard key={order.orderId} {...order} />

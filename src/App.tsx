@@ -12,9 +12,10 @@ import Following from './pages/Home/Following';
 import Like from './pages/Like';
 import Message from './pages/Message';
 import Likes from './pages/Message/Likes';
-// import Follows from './pages/Message/Follows';
-// import Comments from './pages/Message/Comments';
+import Follows from './pages/Message/Follows';
+import Comments from './pages/Message/Comments';
 import Cart from './pages/Cart';
+import OrderDetail from './pages/OrderDetial';
 import Profile from './pages/Profile';
 import {
   HomeOutlined,
@@ -78,10 +79,11 @@ const App: React.FC = () => {
           <Route path="/message" element={<Message />}>
             <Route index element={<Message />} />
             <Route path="likes" element={<Likes />} />
-            {/* <Route path="follows" element={<Follows />} />
-            <Route path="comments" element={<Comments />} /> */}
+            <Route path="follows" element={<Follows />} />
+            <Route path="comments" element={<Comments />} />
           </Route>
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/orderDetail" element={<OrderDetail />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Navigate to="/" />} />
           {/* 其他路径重定向到根 */}
