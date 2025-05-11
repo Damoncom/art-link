@@ -16,6 +16,9 @@ import {
 import styled from 'styled-components';
 import author3 from '../components/ArtworkCard/image/author3.jpg';
 import demo3 from '../components/ArtworkCard/image/demo3.jpg';
+import work1 from '../components/ArtworkCard/image/work1.jpg';
+import work2 from '../components/ArtworkCard/image/work2.jpg';
+import work3 from '../components/ArtworkCard/image/work3.jpg';
 
 const TrackingProcess: React.FC = () => {
   const navigate = useNavigate();
@@ -29,21 +32,21 @@ const TrackingProcess: React.FC = () => {
     {
       id: 0,
       name: '需求确认',
-      image: demo3,
+      image: work1,
       description: '已确认您的定制需求',
       date: '2025-04-10',
     },
     {
       id: 1,
       name: '创作中',
-      image: author3,
+      image: work2,
       description: '艺术家正在创作您的作品',
       date: '2025-04-15',
     },
     {
       id: 2,
       name: '已完成',
-      image: demo3,
+      image: work3,
       description: '作品已完成',
       date: '2025-04-25',
     },
