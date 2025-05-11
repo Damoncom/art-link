@@ -24,7 +24,10 @@ const OrderDetail: React.FC = () => {
       </Header>
 
       {/* 订单状态 */}
-      <StatusCard>
+      <StatusCard
+        onClick={() => navigate('/cart/orderDetail/tracking-process')}
+        style={{ cursor: 'pointer' }}
+      >
         <Logo>🎨</Logo>
         <StatusText>
           <div style={{ fontWeight: 'bold' }}>已完成创作</div>
