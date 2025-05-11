@@ -17,6 +17,7 @@ import Comments from './pages/Message/Comments';
 import Cart from './pages/Cart';
 import OrderDetail from './pages/OrderDetial';
 import TrackingProcess from './pages/TrackingProcess';
+import ChatPage from './pages/ChatPage';
 import Profile from './pages/Profile';
 import {
   HomeOutlined,
@@ -90,6 +91,7 @@ const App: React.FC = () => {
             element={<TrackingProcess />}
           />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/chat" element={<ChatPage />} />
           <Route path="*" element={<Navigate to="/" />} />
           {/* 其他路径重定向到根 */}
         </Routes>

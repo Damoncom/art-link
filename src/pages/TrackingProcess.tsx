@@ -257,7 +257,8 @@ const TrackingProcess: React.FC = () => {
             <PhoneOutlined style={{ marginRight: '5px' }} />
             189123456789
           </PhoneInfo>
-          <ChatButton>
+
+          <ChatButton onClick={() => navigate('/chat')}>
             <MessageOutlined /> 讨论
           </ChatButton>
         </AuthorContact>

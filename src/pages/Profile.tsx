@@ -12,7 +12,7 @@ import {
 } from '@ant-design/icons';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import styled from 'styled-components';
-import author3 from '../components/ArtworkCard/image/author3.jpg';
+import author2 from '../components/ArtworkCard/image/author2.jpg';
 
 export const SettingsContainer = styled.div`
   background: white;
@@ -62,8 +62,8 @@ export const ArrowIcon = styled.span`
 const Profile: React.FC = () => {
   // 模拟用户数据
   const profileData = {
-    avatarUrl: author3,
-    name: '炒饭博主bot',
+    avatarUrl: author2,
+    name: '一只per',
     bio: '抽象 | 宠物 | 摄影 | 家居 | 美食 | 戒酒博主！',
     isVerified: true,
     isFollowing: false,
